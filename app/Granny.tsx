@@ -19,7 +19,12 @@ export const Granny = () => {
         ref={grannyRef}
         position={[0, 5, 0.5]}
         geometry={granny.Face.geometry}
-        material={new MeshNormalMaterial()}
+        material={
+          new MeshNormalMaterial({
+            transparent: true,
+            opacity: 0.9,
+          })
+        }
       />
     </Float>
   );
