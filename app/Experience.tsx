@@ -3,17 +3,17 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
+import { Granny } from "./Granny";
+import { Graveyard } from "./Graveyard";
+
 export const Experience = () => {
   return (
     <Canvas>
       <color args={["black"]} attach="background" />
       <OrbitControls />
       <ambientLight />
-
-      <mesh rotation={[Math.PI * 0.25, Math.PI * 0.25, 0]}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshNormalMaterial />
-      </mesh>
+      <Granny />
+      <Graveyard />
     </Canvas>
   );
 };
